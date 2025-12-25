@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MC Server Maker</title>
+  <meta name="description" content="Create a Minecraft server starter pack (configs + start script) in seconds." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="MC Server Maker Home">
+      <span class="brand-icon" aria-hidden="true">⛏️</span>
+      <span class="brand-text">MC Server Maker</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link" href="create.html">Create</a>
+      <a class="nav-link" href="guides.html">Guides</a>
+      <a class="nav-link" href="legal.html">Legal</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label" id="themeLabel">Dark</span>
+      </button>
+      <a class="cta" href="create.html">Create Server</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Easily Create a Minecraft Server Starter Pack</h1>
+        <p class="lead">
+          Generate a ZIP with <strong>start.bat</strong>, <strong>server.properties</strong>, <strong>eula.txt</strong>,
+          and a simple README — then download your server jar from official sources.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="create.html">Create Your Server</a>
+          <a class="btn ghost" href="guides.html">Read Guides</a>
+        </div>
+        <p class="micro">100% free • no login • runs in your browser</p>
+      </div>
+
+      <div class="hero-card" role="img" aria-label="Preview card">
+        <div class="hero-card-top">
+          <span class="pill">Starter Pack</span>
+          <span class="pill">Windows</span>
+          <span class="pill">ZIP Download</span>
+        </div>
+        <div class="hero-card-body">
+          <div class="mini-row"><span>Software</span><span>Paper / Vanilla / Fabric / Forge</span></div>
+          <div class="mini-row"><span>RAM</span><span>1–64 GB</span></div>
+          <div class="mini-row"><span>Players</span><span>1–200</span></div>
+          <div class="mini-row"><span>Auth</span><span>Official (recommended)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <div class="feature-icon" aria-hidden="true">⚙️</div>
+        <h2>Choose your setup</h2>
+        <p>Pick software, RAM, port, players, view distance, and more — in a beginner-friendly wizard.</p>
+      </article>
+
+      <article class="feature">
+        <div class="feature-icon" aria-hidden="true">⬇️</div>
+        <h2>Download starter ZIP</h2>
+        <p>Get a clean folder with the essentials. You add the server jar you downloaded officially.</p>
+      </article>
+
+      <article class="feature">
+        <div class="feature-icon" aria-hidden="true">📘</div>
+        <h2>Follow guides</h2>
+        <p>Step-by-step setup, plus port forwarding tips and common fixes.</p>
+      </article>
+    </section>
+
+    <section class="quicklinks">
+      <div class="ql">
+        <h3>Server software</h3>
+        <a class="listlink" href="https://papermc.io/downloads" target="_blank" rel="noopener">Paper downloads ↗</a>
+        <a class="listlink" href="https://www.minecraft.net/en-us/download/server" target="_blank" rel="noopener">Vanilla server ↗</a>
+        <a class="listlink" href="https://fabricmc.net/use/server/" target="_blank" rel="noopener">Fabric server ↗</a>
+        <a class="listlink" href="https://files.minecraftforge.net/" target="_blank" rel="noopener">Forge downloads ↗</a>
+      </div>
+
+      <div class="ql">
+        <h3>Setup guides</h3>
+        <a class="listlink" href="guides.html#paper">Paper setup</a>
+        <a class="listlink" href="guides.html#portforward">Port forwarding basics</a>
+        <a class="listlink" href="guides.html#fixes">Common fixes</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>
+        Not affiliated with Mojang Studios or Microsoft. “Minecraft” is a trademark of Mojang Studios.
+        This site generates scripts/configs only and does not distribute server binaries.
+      </small>
+    </footer>
+  </main>
+
+  <script src="theme.js"></script>
+</body>
+</html>

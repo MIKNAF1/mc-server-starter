@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create • MC Server Maker</title>
+  <meta name="description" content="Create a Minecraft server starter pack (configs + start.bat) and download it as a ZIP." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="MC Server Maker Home">
+      <span class="brand-icon" aria-hidden="true">⛏️</span>
+      <span class="brand-text">MC Server Maker</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link active" href="create.html">Create</a>
+      <a class="nav-link" href="guides.html">Guides</a>
+      <a class="nav-link" href="legal.html">Legal</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label" id="themeLabel">Dark</span>
+      </button>
+      <a class="cta" href="create.html">Create Server</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pagehead">
+      <h1>Create your starter pack</h1>
+      <p class="lead">Fill in the options, then click <strong>Download ZIP</strong>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Server settings</h2>
+
+      <div class="formgrid">
+        <label class="field">
+          <span>Server software</span>
+          <select id="software">
+            <option value="paper" selected>Paper (recommended)</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="fabric">Fabric</option>
+            <option value="forge">Forge</option>
+          </select>
+          <small class="hint">We link to official downloads — we do not host jars.</small>
+        </label>
+
+        <label class="field">
+          <span>RAM (GB)</span>
+          <input id="ram" type="number" min="1" max="64" step="1" value="4" />
+          <small class="hint">Tip: keep under ~60% of system RAM.</small>
+        </label>
+
+        <label class="field">
+          <span>Port</span>
+          <input id="port" type="number" min="1" max="65535" value="25565" />
+        </label>
+
+        <label class="field">
+          <span>Max players</span>
+          <input id="maxPlayers" type="number" min="1" max="200" value="10" />
+        </label>
+
+        <label class="field">
+          <span>View distance</span>
+          <input id="viewDistance" type="number" min="2" max="32" value="10" />
+          <small class="hint">Higher = more lag.</small>
+        </label>
+
+        <label class="field">
+          <span>Simulation distance</span>
+          <input id="simDistance" type="number" min="2" max="32" value="8" />
+        </label>
+
+        <label class="field full">
+          <span>MOTD (server list message)</span>
+          <input id="motd" type="text" maxlength="120" value="My Minecraft Server" />
+        </label>
+
+        <label class="field">
+          <span>Gamemode</span>
+          <select id="gamemode">
+            <option value="survival" selected>Survival</option>
+            <option value="creative">Creative</option>
+            <option value="adventure">Adventure</option>
+            <option value="spectator">Spectator</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Difficulty</span>
+          <select id="difficulty">
+            <option value="peaceful">Peaceful</option>
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Whitelist</span>
+          <select id="whitelist">
+            <option value="false" selected>Off</option>
+            <option value="true">On</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Authentication</span>
+          <select id="authMode">
+            <option value="online" selected>Official accounts (recommended)</option>
+            <option value="offline">Offline mode (private testing only)</option>
+          </select>
+          <small class="hint warn">Offline mode is less secure (name spoofing). Use only for private/LAN testing.</small>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="downloadZip" type="button">Download ZIP</button>
+        <button class="btn ghost" id="reset" type="button">Reset</button>
+      </div>
+
+      <div class="status" id="status" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h2>Official downloads</h2>
+      <p class="muted">After you download your ZIP, download your server software and rename the jar to <code>server.jar</code>.</p>
+      <div class="dlgrid">
+        <a class="dl" href="https://papermc.io/downloads" target="_blank" rel="noopener"><strong>Paper</strong><span>papermc.io/downloads</span></a>
+        <a class="dl" href="https://www.minecraft.net/en-us/download/server" target="_blank" rel="noopener"><strong>Vanilla</strong><span>minecraft.net</span></a>
+        <a class="dl" href="https://fabricmc.net/use/server/" target="_blank" rel="noopener"><strong>Fabric</strong><span>fabricmc.net</span></a>
+        <a class="dl" href="https://files.minecraftforge.net/" target="_blank" rel="noopener"><strong>Forge</strong><span>files.minecraftforge.net</span></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>
+        Not affiliated with Mojang Studios or Microsoft. “Minecraft” is a trademark of Mojang Studios.
+      </small>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

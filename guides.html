@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guides • MC Server Maker</title>
+  <meta name="description" content="Setup guides for Paper/Vanilla/Fabric/Forge and port forwarding basics." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="MC Server Maker Home">
+      <span class="brand-icon" aria-hidden="true">⛏️</span>
+      <span class="brand-text">MC Server Maker</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link" href="create.html">Create</a>
+      <a class="nav-link active" href="guides.html">Guides</a>
+      <a class="nav-link" href="legal.html">Legal</a>
+    </nav>
+
+    <div class="top-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="theme-dot" aria-hidden="true"></span>
+        <span class="theme-label" id="themeLabel">Dark</span>
+      </button>
+      <a class="cta" href="create.html">Create Server</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pagehead">
+      <h1>Guides</h1>
+      <p class="lead">Simple steps for beginners. If you want, we can later add screenshots.</p>
+    </section>
+
+    <section class="card" id="paper">
+      <h2>Paper setup (recommended)</h2>
+      <ol class="steps">
+        <li>Download Paper from the official site: <a href="https://papermc.io/downloads" target="_blank" rel="noopener">papermc.io/downloads</a></li>
+        <li>Put the downloaded jar into your server folder and rename it to <code>server.jar</code>.</li>
+        <li>Run <code>start.bat</code> once (it will generate files and exit).</li>
+        <li>Open <code>eula.txt</code> and change <code>eula=false</code> to <code>eula=true</code>.</li>
+        <li>Run <code>start.bat</code> again. Your server should start.</li>
+      </ol>
+      <p class="muted">Tip: If your server lags, reduce view-distance, lower player count, or allocate more RAM (but not too much).</p>
+    </section>
+
+    <section class="card" id="vanilla">
+      <h2>Vanilla setup</h2>
+      <ol class="steps">
+        <li>Download the official server jar: <a href="https://www.minecraft.net/en-us/download/server" target="_blank" rel="noopener">minecraft.net server download</a></li>
+        <li>Rename it to <code>server.jar</code> and place it into your folder.</li>
+        <li>Run <code>start.bat</code>, accept the EULA, then run again.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="fabric">
+      <h2>Fabric setup</h2>
+      <ol class="steps">
+        <li>Follow Fabric’s server instructions: <a href="https://fabricmc.net/use/server/" target="_blank" rel="noopener">fabricmc.net/use/server</a></li>
+        <li>After you have the server jar/launch file ready, ensure your final runnable jar is named <code>server.jar</code> in your folder.</li>
+        <li>Run <code>start.bat</code>, accept EULA, run again.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="forge">
+      <h2>Forge setup</h2>
+      <ol class="steps">
+        <li>Download Forge from: <a href="https://files.minecraftforge.net/" target="_blank" rel="noopener">files.minecraftforge.net</a></li>
+        <li>Forge sometimes uses a generated run script. For simplicity, create/point to a runnable <code>server.jar</code> in your folder.</li>
+        <li>Run <code>start.bat</code>, accept EULA, run again.</li>
+      </ol>
+      <p class="muted">Forge setups can vary by version. If you want, tell me your exact Forge version and I’ll tailor this page.</p>
+    </section>
+
+    <section class="card" id="portforward">
+      <h2>Port forwarding basics</h2>
+      <ul class="bullets">
+        <li>Local play (same Wi‑Fi) usually works without port forwarding.</li>
+        <li>For friends outside your network, forward TCP port <code>25565</code> to your PC’s local IP.</li>
+        <li>Allow Java/Minecraft in Windows Firewall when prompted.</li>
+        <li>Share your public IP address (or use a DDNS service).</li>
+      </ul>
+      <p class="muted">If you tell me your router brand (Dialog, SLT, etc.), I can guide you with the exact menu steps.</p>
+    </section>
+
+    <section class="card" id="fixes">
+      <h2>Common fixes</h2>
+      <ul class="bullets">
+        <li><strong>“Java not found”</strong>: install Java (Adoptium Temurin is a popular choice) and try again.</li>
+        <li><strong>Server closes instantly</strong>: check <code>logs/latest.log</code> and confirm EULA is true.</li>
+        <li><strong>Can’t connect from outside</strong>: port forward + firewall + correct public IP.</li>
+        <li><strong>Lag</strong>: reduce view-distance, remove heavy plugins/mods, or lower max players.</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <small>Not affiliated with Mojang Studios or Microsoft.</small>
+    </footer>
+  </main>
+
+  <script src="theme.js"></script>
+</body>
+</html>
