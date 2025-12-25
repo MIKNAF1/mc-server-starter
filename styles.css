@@ -12,6 +12,8 @@
   --shadow: 0 14px 40px rgba(0,0,0,0.35);
   --radius: 18px;
   --focus: 0 0 0 3px rgba(94,234,212,0.35);
+  --heroOverlay: rgba(0,0,0,0.45);
+  --heroOverlay2: rgba(0,0,0,0.75);
 }
 
 html[data-theme="light"]{
@@ -25,6 +27,8 @@ html[data-theme="light"]{
   --accent2: #22c55e;
   --warn: #b45309;
   --shadow: 0 14px 40px rgba(14,35,80,0.10);
+  --heroOverlay: rgba(255,255,255,0.55);
+  --heroOverlay2: rgba(255,255,255,0.80);
 }
 
 *{ box-sizing:border-box; }
@@ -42,7 +46,14 @@ a{ color: inherit; }
   margin: 0 auto;
   padding: 18px;
 }
-
+.hero-wrap{
+  background:
+    linear-gradient(180deg, var(--heroOverlay), var(--heroOverlay2)),
+    url("bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .topbar{
   position: sticky;
   top: 0;
